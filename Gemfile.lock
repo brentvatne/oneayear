@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/brentvatne/angular-rails-templates.git
-  revision: 2b69228702875b81c45a2437ddde3dbceb556120
-  specs:
-    angular-rails-templates (0.0.4)
-      railties (>= 3.1)
-      sprockets
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,8 +38,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dotenv (0.9.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -61,7 +57,6 @@ GEM
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     kgio (2.8.1)
-    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -86,6 +81,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.2)
       sprockets-rails (~> 2.0.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.0.2)
       actionpack (= 4.0.2)
       activesupport (= 4.0.2)
@@ -93,7 +93,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.1.1)
-    ref (1.0.5)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -109,9 +108,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    therubyracer (0.12.0)
-      libv8 (~> 3.16.14.0)
-      ref
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -129,15 +125,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angular-rails-templates!
   angularjs-rails
   bcrypt-ruby (~> 3.1.2)
   coffee-rails (~> 4.0.0)
+  foreman
   haml-rails
   jbuilder (~> 1.2)
   pg
   pry
   rails (~> 4.0.0)
+  rails_12factor
   sass-rails (~> 4.0.0)
-  therubyracer
   unicorn
